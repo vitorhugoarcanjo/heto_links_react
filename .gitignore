@@ -1,0 +1,20 @@
+@'
+# Python / Backend
+backend/venv/
+backend/__pycache__/
+**/__pycache__/
+*.py[cod]
+backend/instance/
+*.db
+.env
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# Windows / Editor
+.vscode/
+.idea/
+Thumbs.db
+'@ | Out-File -FilePath .\.gitignore -Encoding utf8

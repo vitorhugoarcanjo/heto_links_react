@@ -1,0 +1,17 @@
+.board-colunas {
+  padding: 8px 24px 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.board-empty {
+  margin: 24px;
+  padding: 40px 24px;
+  text-align: center;
+  background: var(--bg-surface);
+  border: 1px dashed var(--border-subtle);
+  border-radius: var(--radius-lg);
+  color: var(--text-secondary);
+}

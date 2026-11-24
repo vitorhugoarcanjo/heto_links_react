@@ -1,0 +1,85 @@
+.tabela-wrapper {
+  margin: 8px 24px 12px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  overflow-x: auto;
+}
+
+.tabela-links {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tabela-links th {
+  padding: 12px 16px;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.tabela-links td {
+  padding: 11px 16px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.tabela-links tbody tr {
+  transition: background var(--transition-fast);
+}
+
+.tabela-links tbody tr:hover {
+  background: var(--bg-surface-hover);
+}
+
+.tabela-links__grupo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 600;
+  background: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+}
+
+.tabela-links__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.tabela-links__link {
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.tabela-links__link:hover {
+  color: var(--accent-cyan);
+  text-decoration: underline;
+}
+
+.tabela-links__url {
+  color: var(--text-muted);
+  font-size: 12px;
+  max-width: 340px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.tabela-links__acoes {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+}
