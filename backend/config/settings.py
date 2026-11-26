@@ -23,6 +23,10 @@ EMPRESA = "Hetosoft Sistemas"
 TITULO_SISTEMA = "HETOSOFT • Central de Links"
 VERSAO_SISTEMA = "v1.0.0"
 
+GEMINI_API_KEY = (os.getenv("GEMINI_API_KEY") or "").strip()
+GEMINI_MODEL = (os.getenv("GEMINI_MODEL") or "gemini-2.5-flash").strip()
+GEMINI_MODEL_RESERVA = (os.getenv("GEMINI_MODEL_RESERVA") or "gemini-2.5-flash-lite").strip()
+
 _cors_raw = os.getenv("CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173")
 CORS_ORIGINS = [origem.strip() for origem in _cors_raw.split(",") if origem.strip()]
 
@@ -34,6 +38,9 @@ class Config:
     EMPRESA = EMPRESA
     TITULO_SISTEMA = TITULO_SISTEMA
     VERSAO_SISTEMA = VERSAO_SISTEMA
+    GEMINI_API_KEY = GEMINI_API_KEY
+    GEMINI_MODEL = GEMINI_MODEL
+    GEMINI_MODEL_RESERVA = GEMINI_MODEL_RESERVA
     CORS_ORIGINS = CORS_ORIGINS
 
 

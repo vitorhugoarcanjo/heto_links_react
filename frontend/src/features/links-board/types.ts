@@ -1,3 +1,5 @@
+export type { RotaMenu } from '../../types/navigation';
+
 export interface AppConfig {
   nome_sistema: string;
   empresa: string;
@@ -38,4 +40,3 @@ export interface GrupoPayload {
 }
 
 export type ModoVisualizacao = 'colunas' | 'tabela';
-export type RotaMenu = 'links' | 'clientes';

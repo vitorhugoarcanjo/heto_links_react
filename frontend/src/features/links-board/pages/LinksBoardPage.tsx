@@ -10,29 +10,32 @@ import type { GrupoLinks, LinkItem } from '../types';
 import './LinksBoardPage.css';
 
 interface LinksBoardPageProps {
-  boardState: ReturnType<typeof useLinksBoard>;
+  boardState?: ReturnType<typeof useLinksBoard>;
 }
 
 export function LinksBoardPage({ boardState }: LinksBoardPageProps) {
+  const hookState = useLinksBoard();
+  const state = boardState ?? hookState;
+
   const {
-    grupos,
-    gruposFiltrados,
-    loading,
-    erroApi,
-    busca,
+    grupos = [],
+    gruposFiltrados = [],
+    loading = false,
+    erroApi = null,
+    busca = '',
     setBusca,
-    modoVisualizacao,
+    modoVisualizacao = 'colunas',
     setModoVisualizacao,
-    modoEdicao,
+    modoEdicao = false,
     setModoEdicao,
-    totalLinksVisiveis,
-    totalLinksGeral,
+    totalLinksVisiveis = 0,
+    totalLinksGeral = 0,
     recarregar,
     salvarLink,
     excluirLink,
     salvarGrupo,
     excluirGrupo,
-  } = boardState;
+  } = state;
 
   const [modalLinkAberto, setModalLinkAberto] = useState(false);
   const [linkEmEdicao, setLinkEmEdicao] = useState<LinkItem | null>(null);

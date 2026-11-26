@@ -1,12 +1,17 @@
 """Application Factory do Organizador de Links por Grupo — Hetosoft."""
 
+from pathlib import Path
+
+from dotenv import load_dotenv
 from flask import Flask
 from flask_cors import CORS
 
-from backend.config.imports_rotas import registrar_blueprints
-from backend.config.imports_tabelas import criar_todas_tabelas
-from backend.config.settings import settings
-from backend.utils.database.db import close_db
+load_dotenv(Path(__file__).resolve().parents[1] / ".env")
+
+from backend.config.imports_rotas import registrar_blueprints  # noqa: E402
+from backend.config.imports_tabelas import criar_todas_tabelas  # noqa: E402
+from backend.config.settings import settings  # noqa: E402
+from backend.utils.database.db import close_db  # noqa: E402
 
 # ===========================================
 # ============ FACTORY ============

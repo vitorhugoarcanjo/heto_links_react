@@ -1,0 +1,10 @@
+{
+  "sistema": "Hetosoft Links",
+  "modulo": "diagnostico_sped_fiscal",
+  "obrigacao": "EFD_ICMS_IPI",
+  "banco": "Firebird",
+  "tabelas": {
+    "MOVIMENTOS": [],
+    "MOVIMENTOS_ITENS": []
+  }
+}
